@@ -2,7 +2,7 @@
 a script for tieba checkin
 
 
-# TiebaSigner
+# [TiebaSigner](https://github.com/ihmily/TiebaSigner)
 
 百度贴吧一键签到脚本，已稳定运行两年
 
@@ -15,13 +15,13 @@ a script for tieba checkin
 使用命令或者手动下载仓库代码
 
 ```
-git clone https://github.com/ihmily/TiebaSigner.git
+git clone https://github.com/iepngs/index.git
 ```
 
 进入项目文件夹
 
 ```
-cd TiebaSigner
+cd tieba
 ```
 
 
@@ -39,7 +39,7 @@ pip install -r requirements.txt
 3.运行
 
 ```
-python tieba_sign.py
+python index.py
 ```
 
 
@@ -69,7 +69,7 @@ docker run tieba-sign
 1.如果不想自己构建镜像，也可以直接拉取我的docker仓库镜像 ，执行
 
 ```
-docker pull ihmily/tieba-sign:latest
+docker pull iepngs/tieba-sign:latest
 ```
 
 2.修改cookie.json文件，填入你登录百度账号后的cookie
@@ -77,7 +77,7 @@ docker pull ihmily/tieba-sign:latest
 3.然后运行
 
 ```
-docker run -v /path/to/cookie.json:/app/cookie.json ihmily/tieba-sign:latest
+docker run -v /path/to/cookie.json:/app/cookie.json iepngs/tieba-sign:latest
 ```
 
 其中 `/path/to/cookie.json` 替换为你服务器上cookie.json文件的正确路径（**注意需要绝对路径**）
@@ -115,7 +115,7 @@ crontab -e
 0 8 * * * python3 /path/to/tieba_sign.py
 ```
 
-在这个示例中，`0 8 * * *` 表示在每天的上午8点执行，`/path/to/tieba_sign.py` 是签到脚本在服务器中的路径。
+在这个示例中，`0 8 * * *` 表示在每天的上午8点执行，`/path/to/index.py` 是签到脚本在服务器中的路径。
 
 &emsp;
 
